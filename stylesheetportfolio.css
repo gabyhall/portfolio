@@ -1,0 +1,85 @@
+h1{
+    color: #3e27a7;
+    font-family: verdana;
+    text-align:center;
+    padding: 35px;
+}
+
+
+img {
+    padding: 35px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-image: linear-gradient(to right, #91b2f0 0%, #925192 100%);
+    font-family: verdana;
+}
+
+h2{
+    color: #403475;
+}
+
+h3 {
+    color:#3116ac;
+}
+
+#about {
+    border: 5px solid powderblue;
+    border-radius: 40px;
+    padding: 30px;
+}
+
+#codenation {
+    border: 5px solid rgb(29, 66, 146);
+    border-radius: 40px;
+    padding: 30px;
+}
+
+
+#projects { 
+    border: 5px solid rgb(7, 5, 104);
+    border-radius: 40px;
+    padding: 30px;
+} 
+
+#skills { 
+    border: 5px solid rgb(78, 2, 114);
+    border-radius: 40px;
+    padding: 30px;
+} 
+
+#interests {
+    border: 5px solid rgb(156, 75, 132);
+    border-radius: 40px;
+    padding: 30px;
+    text-align: center;
+}
+
+#tellme {
+    background-color: seashell;
+    border-color: 000;
+    text-align: left;
+}
+
+img {
+    display: flex;
+
+}
+
+.media{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: row;
+}
+
+footer {
+    padding: 10px;
+}
+

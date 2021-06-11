@@ -2,65 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="stylesheetportfolio.css"> <!--edit when sorted content-->
+    <link rel="stylesheet" href="stylesheetportfolio.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200;1,400&display=swap" rel="stylesheet">
     <title>Portfolio</title>
+    
 </head>
 <body>
 <h1>Gaby Hall</h1>
-<img src ="me.jpg" width = "400px">
+<img src ="me.jpg" width = "400px" id="pic">
+
+    <div class="wrapper">
+
+        <nav class="flex-nav">
+    <ul>
+        <li><a class="menu" href="#about">About Me</a></a></li>
+        <li><a class="menu" href="#codenation">My Journey</a></li>
+        <li><a class="menu" href="#skills">Skills & Projects</a></li>
+        <li><a class="menu" href="#interests">Interests</a></li>
+        <li><a class="menu" href="#contact">Contact Me</a></li>
+    </ul>
+    </nav>
+    </div>
+
 <body>
 <div id="about">
     <h2>About Me</h2>
     <p>I am a Liverpool-based coder and freelance copywriter, editor and proofreader. <br>
-        I also enjoy writing fiction and have a short story coming out soon in an anthology.
+        I also enjoy writing fiction and have a short story about witches coming out soon in an anthology with 
+        <a href="https://writingonthewall.org.uk" target="_blank">Writing on the Wall</a>. 
+        <br>Watch this space for updates on any publications!
     </p>
 </div>    
 <div id="codenation">
     <h2>My Journey to Code Nation</h2>
-    <p>I have spent time as a translator, having studied foreign languages at university, and as a researcher studying innovation in high tech sectors.
-        Coding offered me the opportunity to learn something new in a way that uses some of the same skills as learning a new language (admittedly, one that is spoken by computers, not handsome Italian musicians) 
-        and to forge a career in the high tech sectors that I had previously thought I could only study from the outside.
+    <p>I have spent time as a translator, having studied foreign languages at university, and as a researcher studying innovation in high-tech sectors.
+        Coding offered me the opportunity to learn something new in a way that uses some of the same skills as learning a new language, but with more logic and fewer exceptions to the rules!
+        With Code Nation I am looking forward to forging a career in tech, which I had previously thought I could only research from the outside looking in. I am excited to see where coding could take me. <br>
     </p>
 </div>
-<div id="skills">
-    <h3>Skills</h3>
-    <ul>
-        <div class = "skills"><li>JavaScript</li></div>
-        <div class = "skills"><li>HTML</li></div>
-        <div class = "skills"><li>CSS</li></div>
-        <div class = "skills"><li>More to come...</li></div>
-    </ul>
+
+<div class="flex-container" id="skills">
+    <div class="flex-child skills">
+        <h3>My Skills</h3>
+        <ul>
+        <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>More to come...</li>
+        </ul>
+    </div>
+
+    <div class="flex-child projects">
+        <h3>My Coding Projects</h3>
+        <ul>
+            <li>Portfolio. <b>Status: In Progress</b></li>
+            <li>Text-based adventure game. <b>Status: Not Started</b></li>
+            <li></li><br><br>
+            <a href="https://github.com/gabyhall" target="_blank" class="btn-position btn-style">GitHub</a>
+        </ul>
+    </div> 
 </div>
-<div id="projects">
-    <h3>My Coding Projects</h3>
-    <ul>
-        <div class = "skills"><li>Portfolio. <b>Status: In Progress</b></li></div>
-        <div class = "skills"><li>Text-based adventure game. <b>Status: Not Started</b></li></div>
-        <div class = "skills"><li></li></div>
-        <div class = "skills"><li></li></div>
-    </ul>
-</div> 
+
 <div id="interests">
     <h2>My Interests</h2>
 
-    <h3>What I'm Reading Right Now</h3>
-    <div class="media">
-    <img src="book cover.jpg" alt="cover of book 'Persepolis Rising by James SA Corey" height ="352 px" width="220 px">
-    <img src="solarpunk.jpg" height="352 px" width="220 px">
-    </div>
-    <h3>What I'm Playing Right Now</h2>
-    <div class="media">
-    <img src="skyrim.png" alt = "Skyrim">
-    <img src="stardew.jpg" alt="Stardew Valley" width = "380px">
-    </div>
-  <p id="tellme" contenteditable="true">Tell me what you're reading or playing!</p>
-  <button type="submit">Send</button>
+    <h3>What I'm Reading or Playing Right Now</h3>
+    <div id="slideshow">
+    <div><a href="https://www.jamessacorey.com/writing-type/books/" target="_blank"><img class="media" src="book cover.jpg" alt="cover of book 'Persepolis Rising by James SA Corey" height ="352 px" width="220 px"></a></div>
+    <div><a href="https://utopia-state-of-mind.com/review-glass-and-gardens-solarpunk-summers-edited-by-sarena-ulibarri/" target="_blank"><img class="media" src="solarpunk.jpg" height="352 px" width="220 px"></a></div>
+    <div><a href="https://elderscrolls.bethesda.net/en/skyrim" target="_blank"><img class="media" src="skyrim.png" alt = "Skyrim" height="352px" ></a></div>
+    <div><a href="https://www.stardewvalley.net" target="_blank"><img class="media" src="stardew.jpg" alt="Stardew Valley" height="352 px"></a></div>
+</div>
+<script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("media");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 4000); // Change image every 4 seconds
+        }
+        </script>
+    <p id="tellme" contenteditable="true">Recommend a book or a game I might like!</p>
+  <button id="submit" type="submit">Send</button>
 </div>    
 </body>
-<footer>
+<footer id="contact">
     <a href="mailto:gaby.a.hall@outlook.com?subject=Mail from portfolio site">Click here to email me</a>
-    <div><a href = "https://twitter.com/gabyahall">Contact me on Twitter here</a></div><br>
-<div><a href = "https://girlsinpolicy.wordpress.com/2021/03/19/life-under-lockdown-englands-north-south-divide-in-the-age-of-coronavirus/">My article on a political blog</a></div>
+    <div><a href = "https://twitter.com/gabyahall">Contact me on Twitter</a></div><br>
+<!-- <div><a href = "https://girlsinpolicy.wordpress.com/2021/03/19/life-under-lockdown-englands-north-south-divide-in-the-age-of-coronavirus/">My article on a political blog</a></div> -->
 </footer>
 </html>
 </body>

@@ -78,22 +78,6 @@
     <div><a href="https://elderscrolls.bethesda.net/en/skyrim" target="_blank"><img class="media" src="skyrim.png" alt = "Skyrim" height="352px" ></a></div>
     <div><a href="https://www.stardewvalley.net" target="_blank"><img class="media" src="stardew.jpg" alt="Stardew Valley" height="352 px"></a></div>
 </div>
-<script>
-        var myIndex = 0;
-        carousel();
-        
-        function carousel() {
-          var i;
-          var x = document.getElementsByClassName("media");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-          }
-          myIndex++;
-          if (myIndex > x.length) {myIndex = 1}    
-          x[myIndex-1].style.display = "block";  
-          setTimeout(carousel, 4000); // Change image every 4 seconds
-        }
-        </script>
     <p id="tellme" contenteditable="true">Recommend a book or a game I might like!</p>
   <button id="submit" type="submit">Send</button>
 </div>    
@@ -103,6 +87,6 @@
     <div><a href = "https://twitter.com/gabyahall">Contact me on Twitter</a></div><br>
 <!-- <div><a href = "https://girlsinpolicy.wordpress.com/2021/03/19/life-under-lockdown-englands-north-south-divide-in-the-age-of-coronavirus/">My article on a political blog</a></div> -->
 </footer>
+<script src="portfolio.js"></script>
 </html>
-</body>
 </html>
